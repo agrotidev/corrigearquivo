@@ -115,6 +115,7 @@
 
 
     async function loadFile(file) {
+      document.getElementById("box").style.display = "block";
       let text = await file.text();
       let nomeArquivo = await file.name;
       nameFile = nomeArquivo.replace(".txt", "")
@@ -126,7 +127,6 @@
 
     // conteudoTXT = "exemplo ; com ; dados ; no ; formato ; csv";
     async function convertArquivo(arquivo) {
-      document.getElementById("box").style.display = "block";
       resultadoTXT = arquivo.split(";");
       output = "";
       valorTotal = resultadoTXT.length;
